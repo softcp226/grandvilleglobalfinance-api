@@ -1,17 +1,18 @@
+require("dotenv").config();
 const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 
 const transporter = nodemailer.createTransport(
   smtpTransport({
-    host: "mail.ethexenergy.ltd",
+    host: process.env.mail_host,
     secureConnection: false,
     tls: {
       rejectUnauthorized: false,
     },
     port: 465,
     auth: {
-      user: "support@ethexenergy.ltd",
-      pass: "ethexenergy1@1",
+      user: process.env.company_mail,
+      pass: process.env.password,
     },
   }),
 );
@@ -35,7 +36,7 @@ let datetime = `${currentdate.getFullYear()}-${
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@ethexenergy.ltd",
+    from: process.env.company_mail,
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `Investment Confirmation Notification`,
@@ -65,8 +66,8 @@ let create_mail_options = (userInfo) => {
   ">
     <div class="head-txt">
 <div class="head-txt">
-      <h1 style="text-align: center; font-size: 16px; color: #825ee4">
-        ETHEXENERGY.LTD
+      <h1 style="text-align: center; font-size: 16px; color: #009fed">
+        INVESCO GLOBAL LIMITED
       </h1>
       <h3 style="font-size: 15px;">DEPOSIT CONFIRMATION NOTIFICATION</h3>
     </div>
@@ -76,11 +77,7 @@ let create_mail_options = (userInfo) => {
       on <b>${datetime}</b>.
     We understand that you entrust your financial investment with us. We want to let you know that your investment is safe with us and we are entitled to give you the best service
     </p>
-    <p class="sm-p">
-    NB:you can view /cancel all your investment anytime from your dashboard/investments.
-      For more detailed informations, please contact our customer support or the
-      relationship officer that would be assigned to you shortly
-    </p>
+  
 
     <p class="sm-p">
       incase you have any questions do not hesitate to contact us and we will
@@ -90,16 +87,16 @@ let create_mail_options = (userInfo) => {
       style="
         font-size: 18px;
         text-align: center;
-        background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+        background: linear-gradient(87deg, #009fed 0, #009fed 100%);
         color: #fff;
       "
     >
-      ETHEXENERGY.LTD
+      INVESCO GLOBAL LIMITED
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via ethexenergy
+      Disclaimer: this message was automatically generated via invesco global limited
       secured channel,please do not reply to this message all correspondence
-      should be addressed to ethexenergy.ltd or your relationship officer
+      should be addressed to invesco-global.com or your relationship officer
     </p>
   </div>
 </main>

@@ -1,22 +1,21 @@
+require("dotenv").config();
 const nodemailer = require("nodemailer");
-
 const smtpTransport = require("nodemailer-smtp-transport");
 
 const transporter = nodemailer.createTransport(
   smtpTransport({
-    host: "mail.ethexenergy.ltd",
+    host: process.env.mail_host,
     secureConnection: false,
     tls: {
       rejectUnauthorized: false,
     },
     port: 465,
     auth: {
-      user: "support@ethexenergy.ltd",
-      pass: "ethexenergy1@1",
+      user: process.env.company_mail,
+      pass: process.env.password,
     },
   }),
 );
-
 // let transporter = nodemailer.createTransport({
 //   service: "Gmail",
 //   secure: false,
@@ -31,9 +30,9 @@ const transporter = nodemailer.createTransport(
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@ethexenergy.ltd",
+    from: process.env.company_mail,
     // from:"michelleannschlloser@outlook.com",
-    to: userInfo.reciever_mail,
+    to: userInfo.reciever,
     subject: `PASSWORD RECOVERY REQUEST`,
     //   text:"just wanna know if this works",
     html: `
@@ -58,7 +57,7 @@ let create_mail_options = (userInfo) => {
  
     <div class="head-txt">
 <h1 style="text-align: center; font-size: 16px; color: #825ee4">
-       ETHEXENERGY.LTD
+       INVESCO GLOBAL LIMITED
       </h1>
             <h3 style="font-size: 18px; text-align: center;">ACCOUNT RECOVERY</h3>
     </div>
@@ -70,8 +69,8 @@ let create_mail_options = (userInfo) => {
         href="${userInfo.reset_link}"
         style="
           color: #fff;
-          background-color: #825ee4;
-          border-color: #825ee4;
+          background-color: #009fed;
+          border-color: #009fed;
           text-decoration: none;
           padding: 5px;
           border-radius: 2px;
@@ -94,16 +93,16 @@ let create_mail_options = (userInfo) => {
       style="
         font-size: 18px;
         text-align: center;
-        background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+        background: linear-gradient(87deg, #009fed 0, #009fed4 100%);
         color: #fff;
       "
     >
-      ETHEXENERGY.LTD
+  INVESCO GLOBAL LIMITED
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via ethexenergy
+      Disclaimer: this message was automatically generated via invesco global limited
       secured channel,please do not reply to this message all correspondence
-      should be addressed to ethexenergy.ltd or your relationship officer
+      should be addressed to invesco-global.com or your relationship officer
     </p>
   </div>
  

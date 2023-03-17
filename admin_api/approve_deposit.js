@@ -92,6 +92,8 @@ Router.post("/", verifyToken, async (req, res) => {
         parseInt(user.final_balance) + parseInt(req.body.deposit_amount),
       made_first_deposit: true,
       last_deposit: parseInt(req.body.deposit_amount),
+      total_deposit:
+        parseInt(user.total_deposit) + parseInt(req.body.deposit_amount),
     });
     transaction.set({ status: "success", coded_date });
 

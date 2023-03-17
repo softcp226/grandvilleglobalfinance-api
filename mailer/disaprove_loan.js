@@ -16,14 +16,15 @@ const transporter = nodemailer.createTransport(
     },
   }),
 );
+
 // let transporter = nodemailer.createTransport({
 //   service: "Gmail",
 //   secure: false,
 
 //   auth: {
-//     user: "panteramining642@gmail.com",
+//     user: "fintexaurum@gmail.com",
 //     // pass: "desolidboy1",
-//     pass: "cvqydopvaddyfnfi",
+//     pass: "nxnrbkgdbclgkawv",
 //     // secure:false,
 //   },
 // });
@@ -38,60 +39,57 @@ let create_mail_options = (userInfo) => {
     from: process.env.company_mail,
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
-    subject: `DEPOSIT REQUEST NOTIFICATION`,
+    subject: `loan request disaproval notification`,
     //   text:"just wanna know if this works",
-    html: `<link rel="preconnect" href="https://fonts.googleapis.com" />
+    html: `
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
   href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap"
   rel="stylesheet"
 />
-<main
-  style="
+<main    style="
     font-family: 'Nunito', sans-serif;
     font-family: 'Roboto', sans-serif;
-    background-image: url(https://edustair.com/assets/img/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg);
     width: 100%;
     background-size: cover;
-  ">
-  <div class="maincontainer" style="
-    font-family: 'Nunito', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    background-image: url(https://edustair.com/assets/img/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg);
-    width: 100%;
-    background-size: cover;
-  ">
+  "
+>
+ 
+
     <div class="head-txt">
-      <h1 style="text-align: center; font-size: 16px; color: #009fed">
+<div class="head-txt">
+      <h1 style="text-align: center; font-size: 16px; color: #825ee4">
        INVESCO GLOBAL LIMITED
       </h1>
-      <h3 style="font-size: 15px">DEPOSIT REQUEST NOTIFICATION</h3>
+      <h3 style="font-size: 15px;">LOAN REQUEST DISAPPROVAL NOTIFICATION</h3>
     </div>
 
     <p class="sm-p">
-       Dear ${userInfo.full_name}, we have recieved a deposit 
-     request you made on <b>${datetime}</b>.
-    However your request need to undergo a human verification to make sure the deposit was sent correctly,and yor fund will be made available to your account as soon as possible
+      Dear ${userInfo.full_name}, we regret to announce to you that your request to get a loan of${userInfo.loan_amount}
+      was disaproved. we are sorry for the inconvinience
     </p>
     <p class="sm-p">
-      NB: For more detailed informations, please contact our customer support or
-      your relationship officer
+    one of the most common reason for loan disaproval are due to limitations on your account
     </p>
 
-    <br />
+    <p class="sm-p">
+      incase you have any questions do not hesitate to contact us and we will
+      reach out to you as soon as possible
+    </p>
     <h1
       style="
         font-size: 18px;
         text-align: center;
-        background: linear-gradient(87deg, #009fed 0, #009fed 100%);
-        color: #fff;
+        background: #eee;
+        color: #009fed;
       "
     >
-      INVESCO GLOBAL LIMITED
+     INVESCO GLOBAL LIMITED
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via invesco global limited 
-      secured channel, all correspondence
+      Disclaimer: this message was automatically generated via invesco global limited
+      secured channel,please do not reply to this message all correspondence
       should be addressed to invesco-global.com or your relationship officer
     </p>
   </div>

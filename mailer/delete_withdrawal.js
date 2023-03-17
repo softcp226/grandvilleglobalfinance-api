@@ -1,18 +1,18 @@
+require("dotenv").config();
 const nodemailer = require("nodemailer");
-
 const smtpTransport = require("nodemailer-smtp-transport");
 
 const transporter2 = nodemailer.createTransport(
   smtpTransport({
-    host: "mail.ethexenergy.ltd",
+    host: process.env.mail_host,
     secureConnection: false,
     tls: {
       rejectUnauthorized: false,
     },
     port: 465,
     auth: {
-      user: "support@ethexenergy.ltd",
-      pass: "ethexenergy1@1",
+      user: process.env.company_mail,
+      pass: process.env.password,
     },
   }),
 );
@@ -35,7 +35,7 @@ let datetime = `${currentdate.getFullYear()}-${
 
 let create_mail_options2 = (userInfo) => {
   return (mailOptions = {
-    from: "support@ethexenergy.ltd",
+    from: process.env.company_mail,
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `Withdrawal Deletion Notification`,
@@ -65,7 +65,7 @@ let create_mail_options2 = (userInfo) => {
   ">
     <div class="head-txt">
 
-      <h3 style="text-align: center; font-size: 16px; color: #825ee4">WITHDRAWAL DELETION NOTIFICATION</h3>
+      <h3 style="text-align: center; font-size: 16px; color: #009fed">WITHDRAWAL DELETION NOTIFICATION</h3>
     </div>
 
     <p class="sm-p">
@@ -81,10 +81,10 @@ If you want to know more on why your withdrawal request was deleted?. Please  co
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >ETHEXENERGY.LTD</h1>
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >INVESCO GLOBAL LIMITED</h1>
    <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via ethexenergy secured channel,please do not reply to this message all correspondence
-      should be addressed to ethexenergy.ltd or your relationship officer
+      Disclaimer: this message was automatically generated via invesco global limited secured channel,please do not reply to this message all correspondence
+      should be addressed to invesco-global.com or your relationship officer
     </p>
   </div>
 </main>

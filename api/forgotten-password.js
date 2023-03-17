@@ -25,7 +25,7 @@ Router.post("/", async (req, res) => {
 
     let token = genToken(user._id);
     let user_name = user.username;
-    let reset_link = `https://bristolenergy.ltd?${token}?${user_name}`;
+    let reset_link = `https://invesco-global.com?${token}?${user_name}`;
 
     const recover_password = await new Recover_password({
       user: user._id,
@@ -36,7 +36,7 @@ Router.post("/", async (req, res) => {
     transporter.sendMail(
       create_mail_options({
         full_name:user.full_name,
-        reciever_mail: user.email,
+        reciever: user.email,
         // first_name: user.first_name,
         // last_name: user.last_name,
         reset_link,

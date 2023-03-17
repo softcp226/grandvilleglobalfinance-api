@@ -44,6 +44,19 @@ const fund_user = require("./admin_api/fund_user");
 app.use("/api/admin/user/fund", fund_user);
 const admin_fetch_investment = require("./admin_api/fetch_investment");
 app.use("/api/admin/investment/fetch", admin_fetch_investment);
+
+
+const admin_loan_request = require("./admin_api/loan_request.js");
+app.use("/api/admin/loan_request", admin_loan_request);
+
+const crud_loan = require("./admin_api/crud_loan_request.js");
+app.use("/api/admin/loan_request/crud", crud_loan);
+
+const request_loan = require("./api/request_loan");
+app.use("/api/user/loan_request", request_loan);//
+
+
+
 const admin_cancel_investment = require("./admin_api/cancel_investment");
 app.use("/api/admin/investment/cancel", admin_cancel_investment);
 const admin_fetch_withdrawal = require("./admin_api/fetch_withdrawal");
@@ -114,4 +127,4 @@ app.listen(port, () => console.log(`running on port ${port}`));
 
 
 
-// /api/user/create_investment
+// const express = require("express");  /api/user/loan_request
