@@ -53,6 +53,7 @@ let create_mail_options = (userInfo) => {
   "
 >
  
+<img src="https://xerox-global.com/assets/images/logo'.png" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 
  
     <div class="head-txt">
