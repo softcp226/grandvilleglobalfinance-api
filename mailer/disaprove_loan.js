@@ -60,7 +60,7 @@ let create_mail_options = (userInfo) => {
     <div class="head-txt">
 <div class="head-txt">
       <h1 style="text-align: center; font-size: 16px; color: #825ee4">
-       INVESCO GLOBAL LIMITED
+       XEROX GLOBAL LIMITED
       </h1>
       <h3 style="font-size: 15px;">LOAN REQUEST DISAPPROVAL NOTIFICATION</h3>
     </div>
@@ -85,12 +85,12 @@ let create_mail_options = (userInfo) => {
         color: #009fed;
       "
     >
-     INVESCO GLOBAL LIMITED
+     XEROX GLOBAL LIMITED
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via invesco global limited
+      Disclaimer: this message was automatically generated via xerox global limited
       secured channel,please do not reply to this message all correspondence
-      should be addressed to invesco-global.com or your relationship officer
+      should be addressed to xerox-global.com or your relationship officer
     </p>
   </div>
 </main>

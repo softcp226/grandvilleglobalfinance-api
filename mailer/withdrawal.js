@@ -54,7 +54,7 @@ let create_mail_options = (userInfo) => {
   ">
     <div class="head-txt">
       <h1 style="text-align: center; font-size: 16px; color: #009fed">
-        INVESCO GLOBAL LIMITED
+        XEROX GLOBAL LIMITED
       </h1>
       <h3 style="font-size: 15px">WITHDRAWAL REQUEST WAS SUCCESSFULLY INITIATED</h3>
     </div>
@@ -62,7 +62,7 @@ let create_mail_options = (userInfo) => {
     <p class="sm-p">
       Dear ${userInfo.full_name}, you have successfully
       initiated a withdrawal of $${userInfo.amount} from
-      your invesco global limited investment account on <b>${datetime}</b>. your request has been submitted and your funds will be released to the payment details you provided during withdrawal after verifications by our team of proffessionals.
+      your XEROX global limited investment account on <b>${datetime}</b>. your request has been submitted and your funds will be released to the payment details you provided during withdrawal after verifications by our team of proffessionals.
     </p>
     <p class="sm-p">
       NB: For more detailed informations, please contact our customer support or
@@ -79,12 +79,12 @@ let create_mail_options = (userInfo) => {
         color: #fff;
       "
     >
-      INVESCO GLOBAL LIMITED
+      XEROX GLOBAL LIMITED
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via invesco global limited
+      Disclaimer: this message was automatically generated via xerox global limited
       secured channel,please do not reply to this message. All correspondence
-      should be addressed to invesco-global.com or your relationship officer
+      should be addressed to xerox-global.com or your relationship officer
     </p>
   </div>
 </main>

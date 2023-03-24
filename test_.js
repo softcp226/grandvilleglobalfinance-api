@@ -1,4 +1,3 @@
-
 //  const transporter = nodemailer.createTransport(
 //    smtpTransport({
 //      host: "mail.cryptocom-mining.com",
@@ -15,23 +14,24 @@
 //  );
 
 const nodemailer = require("nodemailer");
-
+require("dotenv").config();
 const smtpTransport = require("nodemailer-smtp-transport");
-
+console.log("company mail", process.env.company_mail);
 const transporter = nodemailer.createTransport(
   smtpTransport({
-    host: "mail.ethexenergy.ltd",
+    host: process.env.mail_host,
     secureConnection: false,
     tls: {
       rejectUnauthorized: false,
     },
     port: 465,
     auth: {
-      user: "support@ethexenergy.ltd",
-      pass: "ethexenergy1@1",
+      user: process.env.company_mail,
+      pass: process.env.password,
     },
   }),
 );
+console.log("company mail", process.env.company_mail);
 // let transporter = nodemailer.createTransport({
 //   service: "Gmail",
 //   secure: false,
@@ -44,7 +44,6 @@ const transporter = nodemailer.createTransport(
 //   },
 // });
 
-
 let currentdate = new Date();
 let datetime = `${currentdate.getFullYear()}-${
   currentdate.getMonth() + 1
@@ -52,7 +51,7 @@ let datetime = `${currentdate.getFullYear()}-${
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@ethexenergy.ltd",
+    from: process.env.company_mail,
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `Deposit Confirmation Notification`,
@@ -110,21 +109,21 @@ let create_mail_options = (userInfo) => {
 };
 module.exports = { create_mail_options, transporter };
 
- transporter.sendMail(
-   create_mail_options({
-     first_name: "Benjamin",
-     last_name: "Ejiofor",
-     reciever: "chideranwofe02@gmail.com",
-   }),
-   (err, info) => {
-     if (err) return console.log(err.message);
-     console.log(info);
-     // return res.status(400).json({
-     //   error: true,
-     //   errMessage: `Encounterd an error while trying to send an email to you: ${err.message}, try again`,
-     // });
-   },
- );
+transporter.sendMail(
+  create_mail_options({
+    first_name: "Benjamin",
+    last_name: "Ejiofor",
+    reciever: "chideranwofe02@gmail.com",
+  }),
+  (err, info) => {
+    if (err) return console.log(err.message);
+    console.log(info);
+    // return res.status(400).json({
+    //   error: true,
+    //   errMessage: `Encounterd an error while trying to send an email to you: ${err.message}, try again`,
+    // });
+  },
+);
 // transporter.sendMail(mailOptions, (err, info) => {
 //   if (err)
 //     return res
@@ -141,7 +140,6 @@ module.exports = { create_mail_options, transporter };
 // //   return { error: false, message: "message sent" };
 // // });
 // };
-
 
 // let currentdate = new Date();
 // let datetime = `${currentdate.getFullYear()}-${

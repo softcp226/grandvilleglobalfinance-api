@@ -81,11 +81,11 @@ let create_referral_mail_options = (userInfo) => {
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #009fed 0, #009fed 100%); color: #fff;" >INVESCO GLOBAL LIMITED</h1>
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #009fed 0, #009fed 100%); color: #fff;" >XEROX GLOBAL LIMITED</h1>
    <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via invesco global limited
+      Disclaimer: this message was automatically generated via xerox global limited
       secured channel,please do not reply to this message all correspondence
-      should be addressed to invesco-global.com or your relationship officer
+      should be addressed to xerox-global.com or your relationship officer
     </p>
   </div>
 </main>
