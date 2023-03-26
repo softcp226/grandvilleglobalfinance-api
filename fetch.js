@@ -107,7 +107,7 @@ const create_admin = async (user_name, password) => {
   const admin = await new Admin({
     user_name,
     password: hashed_password,
-    email: "support@ethexenergy.ltd",
+    email: "support@xerox-global.com",
     admin_area_charset: "admin_area_charset",
     show_google_translator: "show_google_translator",
   });
