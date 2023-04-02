@@ -31,9 +31,9 @@ Router.post("/", verifyToken, async (req, res) => {
       // investment.loss,
       active_investment: user.active_investment - investment.amount,
     });
-    await user.save();
-    await Investment.findByIdAndDelete(req.body.investment);
-
+    
+   await Investment.findByIdAndDelete(req.body.investment);
+   await user.save();
     res
       .status(200)
       .json({ error: false, message: "success, you canceled an investment" });

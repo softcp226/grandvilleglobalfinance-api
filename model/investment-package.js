@@ -21,7 +21,7 @@ const investment_package_schema = mongoose.Schema({
     type: String,
     required: true,
   },
-
+  specified_days: String,
   min: {
     type: Number,
     required: true,
@@ -34,6 +34,7 @@ const investment_package_schema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  invest_limit_number: Number,
 });
 const Investment_package = mongoose.model(
   "investment_package",

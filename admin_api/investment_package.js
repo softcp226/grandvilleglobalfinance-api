@@ -34,6 +34,8 @@ Router.post("/", verifyToken, async (req, res) => {
 });
 
 Router.post("/add", verifyToken, async (req, res) => {
+  console.log("add body", req.body);
+
   const request_isvalid = validate_admin_add_investment(req.body);
   if (request_isvalid != true)
     return res.status(400).json({ error: true, errMessage: request_isvalid });
@@ -50,10 +52,16 @@ Router.post("/add", verifyToken, async (req, res) => {
       package_name: req.body.package_name,
       package_door: req.body.package_door,
       package_status: req.body.package_status,
-      payment_period: req.body.payment_period,
+      payment_period:
+        req.body.payment_period == "specified_days"
+          ? `${req.body.specified_days} days`
+          : req.body.payment_period,
+      specified_days: req.body.specified_days || "",
+
       min: req.body.min,
       max: req.body.max,
       percentage: req.body.percentage,
+      invest_limit_number: req.body.invest_limit_number ? req.body.invest_limit_number : "",
     });
     await new_investment_package.save();
     res.status(200).json({ error: false, message: new_investment_package });
@@ -70,6 +78,7 @@ Router.post("/add", verifyToken, async (req, res) => {
 });
 
 Router.post("/edit", verifyToken, async (req, res) => {
+  console.log("edit body", req.body);
   console.log(req.body);
   const request_isvalid = validate_admin_edit_investment(req.body);
   if (request_isvalid != true)
@@ -96,10 +105,16 @@ Router.post("/edit", verifyToken, async (req, res) => {
       package_name: req.body.package_name,
       package_door: req.body.package_door,
       package_status: req.body.package_status,
-      payment_period: req.body.payment_period,
+      // payment_period: req.body.payment_period,
+      payment_period:
+        req.body.payment_period == "specified_days"
+          ? `${req.body.specified_days} days`
+          : req.body.payment_period,
+      specified_days: req.body.specified_days || "",
       min: req.body.min,
       max: req.body.max,
       percentage: req.body.percentage,
+      invest_limit_number: req.body.invest_limit_number ? req.body.invest_limit_number : "",
     });
     await investment_package.save();
     res.status(200).json({ error: false, message: "success" });

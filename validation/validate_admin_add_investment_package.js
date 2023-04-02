@@ -10,6 +10,7 @@ const validate_admin_add_investment_package = (req) => {
     min: Joi.string().required(),
     max: Joi.string().required(),
     percentage: Joi.string().required(),
+    invest_length: Joi.string().allow(""),
   });
   const result = schema.validate({
     admin: req.admin,
@@ -21,6 +22,7 @@ const validate_admin_add_investment_package = (req) => {
     min: req.min,
     max: req.max,
     percentage: req.percentage,
+    invest_length: req.invest_length,
   });
   if (result.error) return result.error.message;
   return true;
