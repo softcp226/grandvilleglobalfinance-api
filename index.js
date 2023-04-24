@@ -1,10 +1,59 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+
+// require("dotenv").config();
+// const cors=require("cors")
+// app.use(cors())
+// // app.use("/", express.static("html"));
+
 require("dotenv").config();
-const cors=require("cors")
-app.use(cors())
+const cors = require("cors");
+const helmet = require("helmet");
+
+var corsOptions = {
+  // origin: "https://bristolenergy.biz",
+  origin: [
+    "http://localhost:3000",
+    "https://xerox-global.com",
+    "http://xerox-global.com",
+  ],
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+app.use(helmet());
 // app.use("/", express.static("html"));
+
+const rateLimit = require("express-rate-limit");
+const limiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 60, // limit each IP to 60 requests per windowMs
+  message: "Too many requests from this IP, please try again later",
+});
+
+app.use(limiter);
+
+const winston = require("winston");
+const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.json(),
+  defaultMeta: { service: "your-service-name" },
+  transports: [
+    new winston.transports.File({ filename: "logs/error.log", level: "error" }),
+    new winston.transports.File({ filename: "logs/combined.log" }),
+  ],
+});
+
+app.use((req, res, next) => {
+  logger.info(`Endpoint ${req.method} ${req.originalUrl} was accessed`, {
+    // user_id: req.user.id,
+    req: req.body,
+  });
+  next();
+});
+
+
+
 
 app.post("/",(req,res)=>res.status(200).json({error:false,message:req.body}))
 

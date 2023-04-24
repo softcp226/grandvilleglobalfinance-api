@@ -2,20 +2,32 @@ const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 require("dotenv").config();
 
-const transporter = nodemailer.createTransport(
-  smtpTransport({
-    host: process.env.mail_host,
-    secureConnection: false,
-    tls: {
-      rejectUnauthorized: false,
-    },
-    port: 465,
-    auth: {
-      user: process.env.company_mail,
-      pass: process.env.password,
-    },
-  }),
-);
+// const transporter = nodemailer.createTransport(
+//   smtpTransport({
+//     host: process.env.mail_host,
+//     secureConnection: false,
+//     tls: {
+//       rejectUnauthorized: false,
+//     },
+//     port: 465,
+//     auth: {
+//       user: process.env.company_mail,
+//       pass: process.env.password,
+//     },
+//   }),
+// );
+
+
+let transporter = nodemailer.createTransport({
+  service: "Gmail",
+  secure: false,
+
+  auth: {
+    user: process.env.company_mail,
+    pass: process.env.mail_password,
+  },
+});
+
 
 let currentdate = new Date();
 let datetime = `${currentdate.getFullYear()}-${
