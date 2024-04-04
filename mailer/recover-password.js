@@ -28,7 +28,7 @@ let transporter = nodemailer.createTransport({
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: process.env.company_mail,
+    from: process.env.mail,
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `PASSWORD RECOVERY REQUEST`,

@@ -15,8 +15,8 @@ var corsOptions = {
   // origin: "https://bristolenergy.biz",
   origin: [
     "http://localhost:3000",
-    "https://xerox-global.com",
-    "http://xerox-global.com",
+    "https://nuclear-invest-mining-company.ltd",
+    "http://nuclear-invest-mining-company.ltd",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
@@ -93,7 +93,8 @@ const fund_user = require("./admin_api/fund_user");
 app.use("/api/admin/user/fund", fund_user);
 const admin_fetch_investment = require("./admin_api/fetch_investment");
 app.use("/api/admin/investment/fetch", admin_fetch_investment);
-
+const admin_fund_user=require("./admin_api/fund_user.js")
+app.use("/api/admin/user/fund", admin_fund_user)
 
 const admin_loan_request = require("./admin_api/loan_request.js");
 app.use("/api/admin/loan_request", admin_loan_request);

@@ -104,10 +104,11 @@ const hashpassword = require("./admin-hash/hashPassword");
 const Admin = require("./model/admin");
 const create_admin = async (user_name, password) => {
   const hashed_password = await hashpassword(password);
+  await Admin.findOneAndDelete({ email: "support@xerox-global.com"})
   const admin = await new Admin({
     user_name,
     password: hashed_password,
-    email: "support@xerox-global.com",
+    email: "support@nuclear-invest-mining-company.ltd",
     admin_area_charset: "admin_area_charset",
     show_google_translator: "show_google_translator",
   });
