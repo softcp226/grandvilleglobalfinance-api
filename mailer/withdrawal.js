@@ -65,11 +65,11 @@ let create_mail_options = (userInfo) => {
     background-size: cover;
   ">
   <div style="text-align: center;">
-    <img src="https://xerox-global.com/assets/images/logo'.png" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+    <img src="https://nuclear-invest-mining-company.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 </div>
     <div class="head-txt">
       <h1 style="text-align: center; font-size: 16px; color: #009fed">
-        XEROX GLOBAL LIMITED
+        NUCLEAR INVEST MINING COMPANY
       </h1>
       <h3 style="font-size: 15px">WITHDRAWAL REQUEST WAS SUCCESSFULLY INITIATED</h3>
     </div>
@@ -77,7 +77,7 @@ let create_mail_options = (userInfo) => {
     <p class="sm-p">
       Dear ${userInfo.full_name}, you have successfully
       initiated a withdrawal of $${userInfo.amount} from
-      your XEROX global limited investment account on <b>${datetime}</b>. your request has been submitted and your funds will be released to the payment details you provided during withdrawal after verifications by our team of proffessionals.
+      your nuclear invest mining company investment account on <b>${datetime}</b>. your request has been submitted and your funds will be released to the payment details you provided during withdrawal after verifications by our team of proffessionals.
     </p>
     <p class="sm-p">
       NB: For more detailed informations, please contact our customer support or
@@ -94,12 +94,12 @@ let create_mail_options = (userInfo) => {
         color: #fff;
       "
     >
-      XEROX GLOBAL LIMITED
+      NUCLEAR INVEST MINING COMPANY
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via xerox global limited
+      Disclaimer: this message was automatically generated via nuclear invest mining company
       secured channel,please do not reply to this message. All correspondence
-      should be addressed to xerox-global.com or your relationship officer
+      should be addressed to nuclear-invest-mining-company.ltd or your relationship officer
     </p>
   </div>
 </main>
@@ -122,5 +122,5 @@ module.exports = { create_mail_options, transporter };
 // //     return { error: true, errMessage: `an error occured: ${err.message}` };
 // //   // console.log(info)
 // //   return { error: false, message: "message sent" };
-// // });
+// // }); 
 // };

@@ -96,6 +96,11 @@ app.use("/api/admin/investment/fetch", admin_fetch_investment);
 const admin_fund_user=require("./admin_api/fund_user.js")
 app.use("/api/admin/user/fund", admin_fund_user)
 
+
+// const raise_min_investment=require("./admin_api/upgrade_account")
+// app.use("/api/admin/user/investment_min/raise", raise_min_investment);
+// /api/admin/withdrawal/
+
 const admin_loan_request = require("./admin_api/loan_request.js");
 app.use("/api/admin/loan_request", admin_loan_request);
 
@@ -177,4 +182,4 @@ app.listen(port, () => console.log(`running on port ${port}`));
 
 
 
-// /api/admin/investment_packages
+// api/admin/user/investment_min/raise

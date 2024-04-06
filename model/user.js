@@ -76,6 +76,10 @@ const userSchema = mongoose.Schema({
     type: Number,
     default: 0,
   },
+  // min_investment:{
+  //   type: Number,
+  //   default: 0,
+  // },
   referral_link: String,
   made_first_deposit: {
     type: Boolean,

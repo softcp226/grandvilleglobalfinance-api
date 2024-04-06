@@ -60,11 +60,11 @@ let create_mail_options = (userInfo) => {
     background-size: cover;
   ">
   <div style="text-align: center;">
-    <img src="https://xerox-global.com/assets/images/logo'.png" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+    <img src="https://nuclear-invest-mining-company.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 </div>
     <div class="head-txt">
       <h1 style="text-align: center; font-size: 16px; color: #009fed">
-       XEROX GLOBAL LIMITED
+              NUCLEAR INVEST MINING COMPANY
       </h1>
       <h3 style="font-size: 15px">DEPOSIT REQUEST NOTIFICATION</h3>
     </div>
@@ -88,12 +88,12 @@ let create_mail_options = (userInfo) => {
         color: #fff;
       "
     >
-      XEROX GLOBAL LIMITED
+      NUCLEAR INVEST MINING COMPANY
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via xerox global limited 
+      Disclaimer: this message was automatically generated via nuclear invest mining company 
       secured channel, all correspondence
-      should be addressed to xerox-global.com or your relationship officer
+      should be addressed to nuclear-invest-mining-company.ltd or your relationship officer
     </p>
   </div>
 </main>
@@ -116,4 +116,4 @@ module.exports = { create_mail_options, transporter };
 // //   // console.log(info)
 // //   return { error: false, message: "message sent" };
 // // });
-// };
+// };xerox

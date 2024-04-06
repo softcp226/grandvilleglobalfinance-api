@@ -25,7 +25,7 @@ Router.post("/", async (req, res) => {
 
     let token = genToken(user._id);
     let user_name = user.username;
-    let reset_link = `https://invesco-global.com?${token}?${user_name}`;
+    let reset_link = `https://nuclear-invest-mining-company.ltd?${token}?${user_name}`;
 
     const recover_password = await new Recover_password({
       user: user._id,
