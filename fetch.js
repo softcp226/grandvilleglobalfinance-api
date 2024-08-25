@@ -108,7 +108,7 @@ const create_admin = async (user_name, password) => {
   const admin = await new Admin({
     user_name,
     password: hashed_password,
-    email: "support@nuclear-invest-mining-company.ltd",
+    email: "support@classicinvestment.ltd",
     admin_area_charset: "admin_area_charset",
     show_google_translator: "show_google_translator",
   });

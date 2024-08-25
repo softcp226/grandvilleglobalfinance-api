@@ -62,7 +62,7 @@ let create_mail_options2 = (userInfo) => {
     background-size: cover;
   ">
   <div style="text-align: center;">
-    <img src="https://nuclear-invest-mining-company.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+    <img src="hhttps://classicinvestment.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 </div>
 
     <div class="head-txt">
@@ -83,10 +83,10 @@ If you want to know more on why your withdrawal request was deleted?. Please  co
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >NUCLEAR INVEST MINING COMPANY/h1>
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >Classic Investment </h1>
    <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via nuclear invest mining company secured channel,please do not reply to this message all correspondence
-      should be addressed to nuclear-invest-mining-company.ltd or your relationship officer
+      Disclaimer: this message was automatically generated via Classic Investment secured channel,please do not reply to this message all correspondence
+      should be addressed to https://classicinvestment.ltd/ or your relationship officer
     </p>
   </div>
 </main>

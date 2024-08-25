@@ -15,8 +15,8 @@ var corsOptions = {
   // origin: "https://bristolenergy.biz",
   origin: [
     "http://localhost:3000",
-    "https://nuclear-invest-mining-company.ltd",
-    "http://nuclear-invest-mining-company.ltd",
+    "https://classicinvestment.ltd",
+    "http://classicinvestment.ltd/",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };

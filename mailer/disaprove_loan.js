@@ -55,13 +55,13 @@ let create_mail_options = (userInfo) => {
 >
  
 <div style="text-align: center;">
-    <img src="https://xerox-global.com/assets/images/logo'.png" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+    <img src="https://classicinvestment.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 </div>
 
     <div class="head-txt">
 <div class="head-txt">
       <h1 style="text-align: center; font-size: 16px; color: #825ee4">
-       XEROX GLOBAL LIMITED
+       CLASSIC INVESTMENT
       </h1>
       <h3 style="font-size: 15px;">LOAN REQUEST DISAPPROVAL NOTIFICATION</h3>
     </div>
@@ -86,12 +86,12 @@ let create_mail_options = (userInfo) => {
         color: #009fed;
       "
     >
-     XEROX GLOBAL LIMITED
+     CLASSIC INVESTMENT 
     </h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via xerox global limited
+      Disclaimer: this message was automatically generated via CLASSIC INVESTMENT 
       secured channel,please do not reply to this message all correspondence
-      should be addressed to xerox-global.com or your relationship officer
+      should be addressed to classicinvestment.ltd or your relationship officer
     </p>
   </div>
 </main>
