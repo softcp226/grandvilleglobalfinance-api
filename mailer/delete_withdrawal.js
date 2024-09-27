@@ -2,29 +2,29 @@ require("dotenv").config();
 const nodemailer = require("nodemailer");
 const smtpTransport = require("nodemailer-smtp-transport");
 
-// const transporter2 = nodemailer.createTransport(
-//   smtpTransport({
-//     host: process.env.mail_host,
-//     secureConnection: false,
-//     tls: {
-//       rejectUnauthorized: false,
-//     },
-//     port: 465,
-//     auth: {
-//       user: process.env.company_mail,
-//       pass: process.env.password,
-//     },
-//   }),
-// );
-let transporter2 = nodemailer.createTransport({
-  service: "Gmail",
-  secure: false,
+const transporter2 = nodemailer.createTransport(
+  smtpTransport({
+    host: process.env.mail_host,
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
+    port: 465,
+    auth: {
+      user: process.env.company_mail,
+      pass: process.env.password,
+    },
+  }),
+);
+// let transporter2 = nodemailer.createTransport({
+//   service: "Gmail",
+//   secure: false,
 
-  auth: {
-    user: process.env.company_mail,
-    pass: process.env.mail_password,
-  },
-});
+//   auth: {
+//     user: process.env.company_mail,
+//     pass: process.env.mail_password,
+//   },
+// });
 
 let currentdate = new Date();
 let datetime = `${currentdate.getFullYear()}-${
@@ -62,7 +62,7 @@ let create_mail_options2 = (userInfo) => {
     background-size: cover;
   ">
   <div style="text-align: center;">
-    <img src="hhttps://classicinvestment.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+    <img src="https://grandvilleglobalfinance.com/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 </div>
 
     <div class="head-txt">
@@ -83,10 +83,10 @@ If you want to know more on why your withdrawal request was deleted?. Please  co
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >Classic Investment </h1>
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >Grand Ville Global Finance </h1>
    <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via Classic Investment secured channel,please do not reply to this message all correspondence
-      should be addressed to https://classicinvestment.ltd/ or your relationship officer
+      Disclaimer: this message was automatically generated via Grand Ville Global Finance secured channel,please do not reply to this message all correspondence
+      should be addressed to https://grandvilleglobalfinance.com/ or your relationship officer
     </p>
   </div>
 </main>

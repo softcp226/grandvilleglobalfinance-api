@@ -15,7 +15,7 @@ const {
 } = require("../mailer/referral_mail");
 
 Router.post("/", async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const isvalid = validateUser(req.body);
   if (isvalid != true)
     return res.status(400).json({ error: true, errMessage: isvalid });
@@ -28,7 +28,7 @@ Router.post("/", async (req, res) => {
         .json({ error: true, errMessage: "user already exist, please login" });
 
     const username = await User.findOne({ username: req.body.username });
-    console.log(username);
+    // console.log(username);
     if (username)
       return res.status(400).json({
         error: true,
@@ -42,7 +42,7 @@ Router.post("/", async (req, res) => {
       email: req.body.email,
       // country: req.body.country,
       password,
-      referral_link: `https://xerox-global.com?${req.body.username}`,
+      referral_link: `https://grandvilleglobalfiance.com?${req.body.username}`,
 
       referral: req.body.referral,
     });
@@ -66,14 +66,14 @@ Router.post("/", async (req, res) => {
       }),
       (err, info) => {
         if (err) return console.log(err.message);
-        console.log(info);
+        // console.log(info);
         // return res.status(400).json({
         //   error: true,
         //   errMessage: `Encounterd an error while trying to send an email to you: ${err.message}, try again`,
         // });
       },
     );
-    console.log("user", result);
+    // console.log("user", result);
     const token = genToken(result._id);
     res.status(200).json({
       error: false,

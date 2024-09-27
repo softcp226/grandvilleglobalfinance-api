@@ -62,7 +62,7 @@ let create_referral_mail_options = (userInfo) => {
     width: 100%;
     background-size: cover;
   ">
-  <img src="https://classicinvestment.ltd/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
+  <img src="https://grandvilleglobalfinance.com/images/logo.jpg" style="width: 80px; text-align: center; margin: auto;" alt="Logo">
 
     <div class="head-txt">
 
@@ -81,11 +81,11 @@ let create_referral_mail_options = (userInfo) => {
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #009fed 0, #009fed 100%); color: #fff;" >Classic Investment</h1>
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #009fed 0, #009fed 100%); color: #fff;" >Grand Ville Global Finance</h1>
    <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
-      Disclaimer: this message was automatically generated via Classic Investment
+      Disclaimer: this message was automatically generated via Grand Ville Global Finance
       secured channel,please do not reply to this message all correspondence
-      should be addressed to classicinvestment.ltd or your relationship officer
+      should be addressed to grandvilleglobalfinance.com or your relationship officer
     </p>
   </div>
 </main>

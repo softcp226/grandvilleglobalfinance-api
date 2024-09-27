@@ -15,12 +15,12 @@ var corsOptions = {
   // origin: "https://bristolenergy.biz",
   origin: [
     "http://localhost:3000",
-    "https://classicinvestment.ltd",
-    "http://classicinvestment.ltd/",
+    "https://grandvilleglobalfinance.com",
+    "http://grandvilleglobalfinance.com/",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(helmet());
 // app.use("/", express.static("html"));
 
@@ -31,7 +31,7 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again later",
 });
 
-app.use(limiter);
+// app.use(limiter);
 
 const winston = require("winston");
 const logger = winston.createLogger({
@@ -51,6 +51,10 @@ app.use((req, res, next) => {
   });
   next();
 });
+
+
+
+// app.use("/", express.static("grandvillegloalfinance-"))
 
 
 
